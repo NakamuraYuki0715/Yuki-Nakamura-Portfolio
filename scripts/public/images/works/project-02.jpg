@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750">
+  <defs>
+    <linearGradient id="sbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <linearGradient id="sblue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#4f46e5" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#sbg)" />
+  <rect x="80" y="60" width="1040" height="630" rx="16" fill="#0f172a" stroke="#1e293b" stroke-width="1.5" />
+  <circle cx="115" cy="90" r="6" fill="#ef4444" opacity="0.8" />
+  <circle cx="135" cy="90" r="6" fill="#eab308" opacity="0.8" />
+  <circle cx="155" cy="90" r="6" fill="#22c55e" opacity="0.8" />
+  <rect x="200" y="78" width="600" height="24" rx="6" fill="#020617" />
+  <text x="500" y="94" font-family="-apple-system, sans-serif" font-size="11" fill="#64748b" text-anchor="middle">saas-analytics-preview.concept</text>
+
+  <!-- SaaS UI Hero & Chart -->
+  <rect x="120" y="140" width="960" height="500" fill="#020617" rx="8" />
+  <text x="180" y="220" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#38bdf8" letter-spacing="2">NEXT-GEN ANALYTICS</text>
+  <text x="180" y="265" font-family="-apple-system, sans-serif" font-size="38" font-weight="700" fill="#f8fafc">Data-Driven Insights for Fast Teams</text>
+  
+  <!-- Analytics Graph Mockup -->
+  <rect x="180" y="320" width="560" height="260" rx="12" fill="#0f172a" stroke="#1e293b" stroke-width="1" />
+  <path d="M 220 500 Q 300 420, 380 460 T 540 380 T 700 360" fill="none" stroke="#4f46e5" stroke-width="3" />
+  <path d="M 220 500 Q 300 420, 380 460 T 540 380 T 700 360 L 700 540 L 220 540 Z" fill="#4f46e5" opacity="0.1" />
+
+  <!-- Metric Cards -->
+  <rect x="770" y="320" width="270" height="120" rx="12" fill="#0f172a" stroke="#1e293b" stroke-width="1" />
+  <text x="800" y="355" font-family="-apple-system, sans-serif" font-size="12" fill="#94a3b8">Active Users</text>
+  <text x="800" y="395" font-family="-apple-system, sans-serif" font-size="28" font-weight="700" fill="#38bdf8">+142.8%</text>
+
+  <rect x="770" y="460" width="270" height="120" rx="12" fill="#0f172a" stroke="#1e293b" stroke-width="1" />
+  <text x="800" y="495" font-family="-apple-system, sans-serif" font-size="12" fill="#94a3b8">Conversion Rate</text>
+  <text x="800" y="535" font-family="-apple-system, sans-serif" font-size="28" font-weight="700" fill="#10b981">4.82%</text>
+</svg>

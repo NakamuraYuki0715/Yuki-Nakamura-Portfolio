@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #ffffff;
+    --bg-light: #f7f7f8;
+    --text-main: #222222;
+    --text-sub: #666666;
+    --accent: #4f46e5;
+    --accent-light: #eef2ff;
+    --border-color: #eaeaea;
+    --btn-primary: #111111;
+    --btn-hover: #333333;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: light;
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: "Noto Sans JP", "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #4f46e5;
+    color: #ffffff;
+  }
+}
+
+/* 欧文専用フォントクラス */
+.font-en {
+  font-family: "Poppins", "Noto Sans JP", sans-serif;
+}
+
+/* 洗練されたグラデーション背景装飾 */
+.hero-gradient-bg {
+  background: 
+    radial-gradient(circle at 15% 15%, rgba(79, 70, 229, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(79, 70, 229, 0.03) 0%, transparent 45%),
+    linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+}
+
+.subtle-grid-bg {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+}
+
+/* アニメーション用トランジション */
+.transition-smooth {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Reduced Motion 対応 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
