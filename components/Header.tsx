@@ -52,37 +52,38 @@ export const Header: React.FC = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/85 backdrop-blur-md border-b border-[#EAEAEA]/80 py-3 shadow-[0_2px_10px_rgba(0,0,0,0.02)]"
-          : "bg-transparent py-5"
+          ? "bg-[#FAFBF8]/90 backdrop-blur-md border-b border-[#E0E6DE] py-3.5 shadow-[0_4px_20px_rgba(23,76,60,0.04)]"
+          : "bg-transparent py-5 sm:py-6"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand Logo */}
         <Link
           href="/"
-          className="text-base sm:text-lg font-bold tracking-wider text-[#222222] hover:text-[#4F46E5] transition-colors font-en focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4F46E5] rounded-sm"
+          className="text-base sm:text-lg font-bold tracking-wider text-[#202620] hover:text-[#174C3C] transition-colors font-en focus:outline-none focus-visible:ring-2 focus-visible:ring-[#174C3C] rounded-sm flex items-center gap-2"
           onClick={closeMenu}
         >
-          {siteConfig.brandName}
+          <span className="w-2.5 h-2.5 rounded-full bg-[#174C3C]" />
+          <span>{siteConfig.brandName}</span>
         </Link>
 
         {/* Desktop Navigation */}
         <nav
-          className="hidden md:flex items-center gap-8 text-sm font-medium text-[#666666]"
+          className="hidden md:flex items-center gap-8 text-sm font-medium text-[#70776F]"
           aria-label="主要ナビゲーション"
         >
           {siteConfig.navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="hover:text-[#222222] transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#4F46E5] hover:after:w-full after:transition-all after:duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4F46E5] rounded-sm"
+              className="hover:text-[#174C3C] transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#174C3C] hover:after:w-full after:transition-all after:duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#174C3C] rounded-sm font-en text-[13px] tracking-wide"
             >
               {link.label}
             </Link>
           ))}
           <Link
             href="/#contact"
-            className="inline-flex items-center justify-center px-4 py-2 text-xs font-semibold tracking-wide text-white bg-[#111111] hover:bg-[#333333] rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4F46E5]"
+            className="inline-flex items-center justify-center px-5 py-2 text-xs font-semibold tracking-wide text-white bg-[#174C3C] hover:bg-[#10382E] rounded-full transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#174C3C] shadow-sm hover:shadow"
           >
             お問い合わせ
           </Link>
@@ -92,7 +93,7 @@ export const Header: React.FC = () => {
         <div className="flex md:hidden">
           <button
             type="button"
-            className="p-2 text-[#222222] hover:text-[#4F46E5] rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4F46E5] transition-colors"
+            className="p-2 text-[#202620] hover:text-[#174C3C] rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-[#174C3C] transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-expanded={isMobileMenuOpen}
             aria-controls="mobile-menu"
@@ -106,20 +107,20 @@ export const Header: React.FC = () => {
       {/* Mobile Drawer Menu */}
       <div
         id="mobile-menu"
-        className={`fixed inset-0 top-[57px] bg-white/98 backdrop-blur-xl z-40 md:hidden transition-all duration-300 flex flex-col px-6 py-8 ${
+        className={`fixed inset-0 top-[60px] bg-[#FAFBF8]/98 backdrop-blur-xl z-40 md:hidden transition-all duration-300 flex flex-col px-6 py-8 ${
           isMobileMenuOpen
             ? "opacity-100 pointer-events-auto translate-y-0"
             : "opacity-0 pointer-events-none -translate-y-4"
         }`}
         aria-hidden={!isMobileMenuOpen}
       >
-        <nav className="flex flex-col gap-6 text-lg font-medium text-[#222222]">
+        <nav className="flex flex-col gap-5 text-base font-medium text-[#202620]">
           {siteConfig.navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={closeMenu}
-              className="py-2 border-b border-[#EAEAEA] hover:text-[#4F46E5] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4F46E5] rounded"
+              className="py-2.5 border-b border-[#E0E6DE] hover:text-[#174C3C] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#174C3C] rounded font-en"
             >
               {link.label}
             </Link>
@@ -129,7 +130,7 @@ export const Header: React.FC = () => {
           <Link
             href="/#contact"
             onClick={closeMenu}
-            className="w-full inline-flex items-center justify-center px-6 py-3.5 text-sm font-semibold text-white bg-[#111111] hover:bg-[#333333] rounded-full transition-colors shadow-sm"
+            className="w-full inline-flex items-center justify-center px-6 py-3.5 text-sm font-semibold text-white bg-[#174C3C] hover:bg-[#10382E] rounded-full transition-colors shadow-sm"
           >
             お問い合わせ
           </Link>

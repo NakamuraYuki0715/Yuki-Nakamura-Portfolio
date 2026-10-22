@@ -24,18 +24,18 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
       } ${className}`}
     >
       <div
-        className={`inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EEF2FF] text-[#4F46E5] text-xs font-semibold tracking-widest uppercase mb-3 ${
+        className={`inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#DCE8DC]/80 text-[#174C3C] text-xs font-semibold tracking-widest uppercase mb-3.5 font-en ${
           isCenter ? "mx-auto" : ""
         }`}
       >
-        <span className="w-1.5 h-1.5 rounded-full bg-[#4F46E5]"></span>
+        <span className="w-1.5 h-1.5 rounded-full bg-[#174C3C]"></span>
         <span>{badge}</span>
       </div>
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#222222] leading-tight">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#202620] leading-tight">
         {title}
       </h2>
       {subtitle && (
-        <p className="mt-4 text-base md:text-lg text-[#666666] leading-relaxed">
+        <p className="mt-3.5 text-sm sm:text-base text-[#70776F] leading-relaxed">
           {subtitle}
         </p>
       )}

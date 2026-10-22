@@ -102,18 +102,18 @@ export const Contact: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
         {/* 左側：ご相談内容の例 ＆ ご案内 */}
         <div className="lg:col-span-5 space-y-6">
-          <div className="bg-[#F7F7F8] p-6 sm:p-8 rounded-2xl border border-[#EAEAEA]">
-            <h3 className="text-base sm:text-lg font-bold text-[#222222] mb-4 flex items-center gap-2">
-              <Sparkles size={18} className="text-[#4F46E5]" />
+          <div className="bg-white p-6 sm:p-8 rounded-2xl border border-[#E0E6DE] shadow-sm">
+            <h3 className="text-base sm:text-lg font-bold text-[#202620] mb-4 flex items-center gap-2">
+              <Sparkles size={18} className="text-[#174C3C]" />
               ご相談いただける内容
             </h3>
-            <p className="text-xs sm:text-sm text-[#666666] leading-relaxed mb-5">
+            <p className="text-xs sm:text-sm text-[#70776F] leading-relaxed mb-5">
               以下のような制作・改善のご要望を承っています。まだ具体的な仕様が決まっていない段階でもお気軽にご相談ください。
             </p>
-            <ul className="space-y-2.5">
+            <ul className="space-y-3">
               {siteConfig.contact.topics.map((topic, index) => (
-                <li key={index} className="flex items-center gap-2.5 text-xs sm:text-sm text-[#444444]">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#4F46E5] shrink-0" />
+                <li key={index} className="flex items-center gap-2.5 text-xs sm:text-sm text-[#202620]">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#174C3C] shrink-0" />
                   <span>{topic}</span>
                 </li>
               ))}
@@ -121,23 +121,23 @@ export const Contact: React.FC = () => {
           </div>
 
           {/* デモ動作の明記（仕様遵守） */}
-          <div className="p-4 rounded-xl bg-[#EEF2FF] border border-[#4F46E5]/20 text-xs text-[#4F46E5] leading-relaxed flex items-start gap-2.5">
-            <Info size={16} className="shrink-0 mt-0.5" />
+          <div className="p-4 rounded-xl bg-[#DCE8DC]/50 border border-[#174C3C]/20 text-xs text-[#174C3C] leading-relaxed flex items-start gap-2.5">
+            <Info size={16} className="shrink-0 mt-0.5 text-[#174C3C]" />
             <p>{siteConfig.contact.notice}</p>
           </div>
         </div>
 
         {/* 右側：コンタクトフォーム */}
-        <div className="lg:col-span-7 bg-white p-6 sm:p-10 rounded-2xl border border-[#EAEAEA] shadow-sm">
+        <div className="lg:col-span-7 bg-white p-6 sm:p-10 rounded-2xl border border-[#E0E6DE] shadow-sm">
           {isSubmitted ? (
             <div className="py-12 text-center space-y-4">
-              <div className="w-14 h-14 rounded-full bg-[#EEF2FF] text-[#4F46E5] flex items-center justify-center mx-auto mb-2">
+              <div className="w-14 h-14 rounded-full bg-[#DCE8DC]/70 text-[#174C3C] flex items-center justify-center mx-auto mb-2">
                 <CheckCircle2 size={32} />
               </div>
-              <h3 className="text-xl font-bold text-[#222222]">
+              <h3 className="text-xl font-bold text-[#202620]">
                 入力内容を受け付けました（デモ）
               </h3>
-              <p className="text-xs sm:text-sm text-[#666666] max-w-md mx-auto leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#70776F] max-w-md mx-auto leading-relaxed">
                 フォームの入力確認が正常に完了しました。実際の運用時にはここに送信完了メッセージや自動返信メールの案内が表示されます。
               </p>
               <div className="pt-4">
@@ -152,9 +152,9 @@ export const Contact: React.FC = () => {
               <div>
                 <label
                   htmlFor="contact-name"
-                  className="block text-xs sm:text-sm font-semibold text-[#222222] mb-1.5"
+                  className="block text-xs sm:text-sm font-semibold text-[#202620] mb-1.5"
                 >
-                  お名前 <span className="text-[#4F46E5] ml-0.5">*</span>
+                  お名前 <span className="text-[#174C3C] ml-0.5">*</span>
                 </label>
                 <input
                   type="text"
@@ -166,8 +166,8 @@ export const Contact: React.FC = () => {
                   aria-required="true"
                   aria-invalid={!!errors.name}
                   aria-describedby={errors.name ? "name-error" : undefined}
-                  className={`w-full px-4 py-3 rounded-xl border text-sm text-[#222222] placeholder:text-[#AAAAAA] bg-[#FAFAFA] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4F46E5] transition-all ${
-                    errors.name ? "border-red-500 ring-1 ring-red-500" : "border-[#EAEAEA]"
+                  className={`w-full px-4 py-3 rounded-xl border text-sm text-[#202620] placeholder:text-[#A0A8A0] bg-[#FAFBF8] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#174C3C] transition-all ${
+                    errors.name ? "border-red-500 ring-1 ring-red-500" : "border-[#E0E6DE]"
                   }`}
                 />
                 {errors.name && (
@@ -182,9 +182,9 @@ export const Contact: React.FC = () => {
               <div>
                 <label
                   htmlFor="contact-email"
-                  className="block text-xs sm:text-sm font-semibold text-[#222222] mb-1.5"
+                  className="block text-xs sm:text-sm font-semibold text-[#202620] mb-1.5"
                 >
-                  メールアドレス <span className="text-[#4F46E5] ml-0.5">*</span>
+                  メールアドレス <span className="text-[#174C3C] ml-0.5">*</span>
                 </label>
                 <input
                   type="email"
@@ -196,8 +196,8 @@ export const Contact: React.FC = () => {
                   aria-required="true"
                   aria-invalid={!!errors.email}
                   aria-describedby={errors.email ? "email-error" : undefined}
-                  className={`w-full px-4 py-3 rounded-xl border text-sm text-[#222222] placeholder:text-[#AAAAAA] bg-[#FAFAFA] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4F46E5] transition-all ${
-                    errors.email ? "border-red-500 ring-1 ring-red-500" : "border-[#EAEAEA]"
+                  className={`w-full px-4 py-3 rounded-xl border text-sm text-[#202620] placeholder:text-[#A0A8A0] bg-[#FAFBF8] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#174C3C] transition-all ${
+                    errors.email ? "border-red-500 ring-1 ring-red-500" : "border-[#E0E6DE]"
                   }`}
                 />
                 {errors.email && (
@@ -212,7 +212,7 @@ export const Contact: React.FC = () => {
               <div>
                 <label
                   htmlFor="contact-subject"
-                  className="block text-xs sm:text-sm font-semibold text-[#222222] mb-1.5"
+                  className="block text-xs sm:text-sm font-semibold text-[#202620] mb-1.5"
                 >
                   ご相談種別
                 </label>
@@ -221,7 +221,7 @@ export const Contact: React.FC = () => {
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-xl border border-[#EAEAEA] text-sm text-[#222222] bg-[#FAFAFA] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4F46E5] transition-all"
+                  className="w-full px-4 py-3 rounded-xl border border-[#E0E6DE] text-sm text-[#202620] bg-[#FAFBF8] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#174C3C] transition-all"
                 >
                   <option value="Webサイト制作のご相談">Webサイト制作のご相談</option>
                   <option value="LP制作のご相談">LP（ランディングページ）制作のご相談</option>
@@ -235,9 +235,9 @@ export const Contact: React.FC = () => {
               <div>
                 <label
                   htmlFor="contact-message"
-                  className="block text-xs sm:text-sm font-semibold text-[#222222] mb-1.5"
+                  className="block text-xs sm:text-sm font-semibold text-[#202620] mb-1.5"
                 >
-                  お問い合わせ内容 <span className="text-[#4F46E5] ml-0.5">*</span>
+                  お問い合わせ内容 <span className="text-[#174C3C] ml-0.5">*</span>
                 </label>
                 <textarea
                   id="contact-message"
@@ -249,8 +249,8 @@ export const Contact: React.FC = () => {
                   aria-required="true"
                   aria-invalid={!!errors.message}
                   aria-describedby={errors.message ? "message-error" : undefined}
-                  className={`w-full px-4 py-3 rounded-xl border text-sm text-[#222222] placeholder:text-[#AAAAAA] bg-[#FAFAFA] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4F46E5] transition-all resize-y ${
-                    errors.message ? "border-red-500 ring-1 ring-red-500" : "border-[#EAEAEA]"
+                  className={`w-full px-4 py-3 rounded-xl border text-sm text-[#202620] placeholder:text-[#A0A8A0] bg-[#FAFBF8] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#174C3C] transition-all resize-y ${
+                    errors.message ? "border-red-500 ring-1 ring-red-500" : "border-[#E0E6DE]"
                   }`}
                 />
                 {errors.message && (

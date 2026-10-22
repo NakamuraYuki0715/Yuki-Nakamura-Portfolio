@@ -91,9 +91,9 @@ export const siteConfig: SiteConfig = {
   hero: {
     badge: "Web Designer & Front-end Developer",
     mainCopy: "想いを、伝わるデザインへ。",
-    subCopy: "Web Design × Front-end Development",
+    subCopy: "YUKI NAKAMURA — PORTFOLIO",
     description:
-      "Webサイト・LPのデザインからフロントエンド実装まで。企業の魅力や想いを整理し、成果につながる洗練されたWeb体験を創り出します。",
+      "デザインと技術の両面から、ビジネスの魅力を伝えるWebサイトを制作します。",
     ctaPrimary: {
       label: "制作実績を見る",
       href: "#works",

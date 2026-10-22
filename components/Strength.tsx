@@ -7,7 +7,7 @@ export const Strength: React.FC = () => {
   return (
     <section
       id="strength"
-      className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto scroll-mt-16 bg-[#FAFAFA]/70 rounded-3xl my-8 border border-[#EAEAEA]/60"
+      className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto scroll-mt-16 bg-white/70 rounded-3xl my-8 border border-[#E0E6DE]"
       aria-label="選ばれる理由セクション"
     >
       <SectionHeading

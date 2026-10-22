@@ -10,7 +10,7 @@ import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-white text-[#222222]">
+    <div className="flex flex-col min-h-screen bg-[#FAFBF8] text-[#202620]">
       {/* 固定ヘッダー */}
       <Header />
 

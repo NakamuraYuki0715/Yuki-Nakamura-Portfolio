@@ -8,22 +8,22 @@ interface SkillCardProps {
 
 export const SkillCard: React.FC<SkillCardProps> = ({ skill }) => {
   return (
-    <div className="group p-6 rounded-2xl bg-white border border-[#EAEAEA] hover:border-[#4F46E5]/40 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+    <div className="group p-6 rounded-2xl bg-[#FAFBF8] border border-[#E0E6DE] hover:border-[#174C3C]/50 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
       <div>
         <div className="flex items-center justify-between mb-4">
-          <div className="w-12 h-12 rounded-xl bg-[#F7F7F8] group-hover:bg-[#EEF2FF] group-hover:text-[#4F46E5] text-[#222222] flex items-center justify-center transition-colors duration-300">
-            <Icon name={skill.iconName} className="w-6 h-6" />
+          <div className="w-11 h-11 rounded-xl bg-white border border-[#E0E6DE] group-hover:bg-[#DCE8DC]/70 group-hover:text-[#174C3C] text-[#202620] flex items-center justify-center transition-colors duration-300 shadow-2xs">
+            <Icon name={skill.iconName} className="w-5 h-5 text-[#174C3C]" />
           </div>
-          <span className="text-[11px] font-medium px-2.5 py-1 rounded-full bg-[#F7F7F8] text-[#666666] font-en">
+          <span className="text-[11px] font-medium px-2.5 py-1 rounded-full bg-white border border-[#E0E6DE] text-[#70776F] font-en">
             {skill.category}
           </span>
         </div>
 
-        <h3 className="text-lg font-bold text-[#222222] group-hover:text-[#4F46E5] transition-colors mb-2 font-en">
+        <h3 className="text-base sm:text-lg font-bold text-[#202620] group-hover:text-[#174C3C] transition-colors mb-2 font-en">
           {skill.name}
         </h3>
 
-        <p className="text-xs sm:text-sm text-[#666666] leading-relaxed line-clamp-3">
+        <p className="text-xs sm:text-sm text-[#70776F] leading-relaxed line-clamp-3">
           {skill.description}
         </p>
       </div>

@@ -29,12 +29,12 @@ export const Works: React.FC = () => {
       </div>
 
       {/* Works セクション内の自然な相談CTA */}
-      <div className="mt-16 p-8 rounded-2xl bg-[#F7F7F8] border border-[#EAEAEA] flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+      <div className="mt-16 p-8 sm:p-10 rounded-2xl bg-white border border-[#E0E6DE] flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left shadow-xs">
         <div>
-          <h3 className="text-lg font-bold text-[#222222]">
+          <h3 className="text-lg font-bold text-[#202620]">
             イメージに合ったWebサイトをオーダーメイドで制作します
           </h3>
-          <p className="text-xs sm:text-sm text-[#666666] mt-1">
+          <p className="text-xs sm:text-sm text-[#70776F] mt-1.5">
             「こんな雰囲気のサイトを作りたい」「予算感を知りたい」など、お気軽にご相談ください。
           </p>
         </div>

@@ -16,7 +16,7 @@ export const Skills: React.FC = () => {
   return (
     <section
       id="skills"
-      className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto scroll-mt-16 bg-[#FAFAFA]/60 rounded-3xl my-8 border border-[#EAEAEA]/60"
+      className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto scroll-mt-16 bg-white/70 rounded-3xl my-8 border border-[#E0E6DE]"
       aria-label="スキルセクション"
     >
       <SectionHeading
@@ -36,10 +36,10 @@ export const Skills: React.FC = () => {
               role="tab"
               aria-selected={isActive}
               onClick={() => setActiveCategory(category)}
-              className={`px-4 py-2 text-xs sm:text-sm font-medium rounded-full transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4F46E5] ${
+              className={`px-4 py-2 text-xs sm:text-sm font-medium rounded-full transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#174C3C] font-en ${
                 isActive
-                  ? "bg-[#111111] text-white shadow-sm"
-                  : "bg-white text-[#666666] border border-[#EAEAEA] hover:border-[#111111] hover:text-[#111111]"
+                  ? "bg-[#174C3C] text-white shadow-sm"
+                  : "bg-white text-[#70776F] border border-[#E0E6DE] hover:border-[#174C3C] hover:text-[#174C3C]"
               }`}
             >
               {category}

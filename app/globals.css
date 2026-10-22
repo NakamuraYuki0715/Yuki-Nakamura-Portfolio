@@ -2,15 +2,18 @@
 
 @layer base {
   :root {
-    --bg-main: #ffffff;
-    --bg-light: #f7f7f8;
-    --text-main: #222222;
-    --text-sub: #666666;
-    --accent: #4f46e5;
-    --accent-light: #eef2ff;
-    --border-color: #eaeaea;
-    --btn-primary: #111111;
-    --btn-hover: #333333;
+    --bg-main: #FAFBF8;
+    --bg-surface: #FFFFFF;
+    --bg-light: #F4F7F3;
+    --text-main: #202620;
+    --text-sub: #70776F;
+    --color-primary: #174C3C;
+    --color-dark: #10382E;
+    --color-accent: #6E9478;
+    --color-light-green: #DCE8DC;
+    --border-color: #E0E6DE;
+    --btn-primary: #174C3C;
+    --btn-hover: #10382E;
   }
 
   html {
@@ -21,41 +24,47 @@
   body {
     background-color: var(--bg-main);
     color: var(--text-main);
-    font-family: "Noto Sans JP", "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: "Noto Sans JP", "Plus Jakarta Sans", "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
   }
 
   ::selection {
-    background-color: #4f46e5;
-    color: #ffffff;
+    background-color: #174C3C;
+    color: #FFFFFF;
   }
 }
 
 /* 欧文専用フォントクラス */
 .font-en {
-  font-family: "Poppins", "Noto Sans JP", sans-serif;
+  font-family: "Plus Jakarta Sans", "Poppins", -apple-system, sans-serif;
+  letter-spacing: -0.01em;
 }
 
-/* 洗練されたグラデーション背景装飾 */
+/* 上品なグリーンアクセントグラデーション背景装飾 */
 .hero-gradient-bg {
   background: 
-    radial-gradient(circle at 15% 15%, rgba(79, 70, 229, 0.04) 0%, transparent 40%),
-    radial-gradient(circle at 85% 80%, rgba(79, 70, 229, 0.03) 0%, transparent 45%),
-    linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+    radial-gradient(circle at 10% 20%, rgba(220, 232, 220, 0.45) 0%, transparent 45%),
+    radial-gradient(circle at 90% 80%, rgba(110, 148, 120, 0.12) 0%, transparent 50%),
+    linear-gradient(180deg, #FAFBF8 0%, #F5F8F4 100%);
 }
 
 .subtle-grid-bg {
-  background-size: 40px 40px;
+  background-size: 48px 48px;
   background-image: 
-    linear-gradient(to right, rgba(0, 0, 0, 0.02) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+    linear-gradient(to right, rgba(23, 76, 60, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(23, 76, 60, 0.03) 1px, transparent 1px);
+}
+
+/* セクション区切り線装飾 */
+.section-divider {
+  border-top: 1px solid var(--border-color);
 }
 
 /* アニメーション用トランジション */
 .transition-smooth {
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Reduced Motion 対応 */
